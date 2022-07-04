@@ -20,15 +20,3 @@ class SimplifiedPageRank:
                 r[outlink] += v[node] / len(outlinks)
 
         return r
-
-
-if __name__ == "__main__":
-    outlinks = {
-        "A": [],
-        "B": ["A", "C"],
-        "C": ["A"],
-        "D": ["A", "B", "C"],
-    }
-
-    spr = SimplifiedPageRank(outlinks)
-    assert spr.compute_page_rank() == {'A': 0.4583333333333333, 'B': 0.08333333333333333, 'C': 0.20833333333333331, 'D': 0.0}
