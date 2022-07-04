@@ -4,6 +4,10 @@ import unittest
 
 class TestSimplifiedPageRank(unittest.TestCase):
     def test_graph_with_four_nodes(self):
+        """
+        The function `test_graph_with_four_nodes` tests the `compute_page_rank`
+        function on a graph with four nodes.
+        """
         outlinks = {
             "A": [],
             "B": ["A", "C"],
@@ -18,6 +22,10 @@ class TestSimplifiedPageRank(unittest.TestCase):
         )
 
     def test_graph_with_rank_sink(self):
+        """
+        The function `test_graph_with_four_nodes` tests the `compute_page_rank`
+        function on a graph with rank sinks.
+        """
         outlinks = {
             "A": ["B"],
             "B": ["A"],
